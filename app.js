@@ -36,6 +36,14 @@ app.get("/excluir/:id", function(req, res){
       })
 })
 
+app.get("/editar/:id", function(req, res){
+    post.findAll({where: {'id': req.params.id}}).then(function(post){
+        res.render("editar", {post})
+    }).catch(function(erro){
+        console.log("Erro ao carregar dados do banco: " + erro)
+    })
+})
+
 app.post("/cadastrar", function(req, res){
     post.create({
         nome: req.body.nome,
