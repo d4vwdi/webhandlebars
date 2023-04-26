@@ -50,6 +50,15 @@ app.post("/cadastrar", function(req, res){
     })
 })
 
+app.get("/atualizar/:id", function(req, res){
+    post.findAll().then(function(post){
+        res.render("atualizar", {post})
+    }).catch(function(erro){
+        console.log("Erro ao carregar dados do banco: " + erro)
+    })
+})
+
+
 app.listen(8081, function(){
     console.log("Servidor ativo!")
 })
