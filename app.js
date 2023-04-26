@@ -58,7 +58,7 @@ app.post("/cadastrar", function(req, res){
     })
 })
 
-app.get("/confirmar", function(req, res){
+app.post("/confirmar", function(req, res){
     post.update({
         nome: req.body.nome,
         telefone: req.body.telefone,
