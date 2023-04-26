@@ -38,7 +38,7 @@ app.get("/excluir/:id", function(req, res){
 
 app.get("/atualizar/:id", function(req, res){
     post.findAll({where: {'id': req.params.id}}).then(function(post){
-        res.render("editar", {post})
+        res.render("atualizar", {post})
     }).catch(function(erro){
         console.log("Erro ao carregar dados do banco: " + erro)
     })
