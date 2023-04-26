@@ -1,5 +1,5 @@
 # webcrudII comandos:   
-node -vnpm -v
+node -v npm -v
 npm install -g sequelize-cli
 npm install -g sequelize
 npm install --save sequelize
