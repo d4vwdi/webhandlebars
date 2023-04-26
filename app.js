@@ -36,7 +36,7 @@ app.get("/excluir/:id", function(req, res){
       })
 })
 
-app.get("/editar/:id", function(req, res){
+app.get("/atualizar/:id", function(req, res){
     post.findAll({where: {'id': req.params.id}}).then(function(post){
         res.render("editar", {post})
     }).catch(function(erro){
@@ -58,7 +58,7 @@ app.post("/cadastrar", function(req, res){
     })
 })
 
-app.get("/atualizar/:id", function(req, res){
+app.get("/atualizar", function(req, res){
     post.update({
         nome: req.body.nome,
         telefone: req.body.telefone,
