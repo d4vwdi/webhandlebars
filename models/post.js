@@ -11,10 +11,10 @@ const Agendamentos = db.sequelize.define('agendamentos',{
         type: db.Sequelize.STRING
     },
     data_contato:{
-        type: db.Sequelize.DATE
+        type: db.Sequelize.STRING
     },
     observacao:{
-        type: db.Sequelize.TEXT
+        type: db.Sequelize.STRING
     }
 })
 
