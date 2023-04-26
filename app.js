@@ -51,10 +51,18 @@ app.post("/cadastrar", function(req, res){
 })
 
 app.get("/atualizar/:id", function(req, res){
-    post.findAll().then(function(post){
-        res.render("atualizar", {post})
-    }).catch(function(erro){
-        console.log("Erro ao carregar dados do banco: " + erro)
+    post.update({
+        nome: req.body.nome,
+        telefone: req.body.telefone,
+        origem: req.body.origem,
+        data_contato: req.body.data_contato,
+        observacao: req.body.observacao
+    },{
+        where: {
+            id: req.body.id
+        }
+    }).then(function(){
+        res.redirect("/consulta")
     })
 })
 
