@@ -45,8 +45,7 @@
                 <form action="/cadastrar" method="POST">
                 {{#each post}}
                     {{#dataValues}}                   
-                    {{/dataValues}}
-                {{/each}}
+
                     <div class="mb-3 text-start">
                         <label class="form-label">Nome:</label>
                         <input type="name" name="nome" class="form-control" id="nome" value="{{nome}}">
@@ -74,6 +73,8 @@
                     <div class="mb-3 text-start">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
+                 {{/dataValues}}
+                {{/each}}
                 </form>            
             </p>
         </div>
